@@ -101,7 +101,7 @@ const CurrentLocation = () => {
   };
 
   return (
-    <React.Fragment>
+ 
       <Grid container spacing={2}>
         {weahterData.temperatureC ? (
           <Grid item xs={12} md={8}>
@@ -157,7 +157,7 @@ const CurrentLocation = () => {
           </div>
         </Grid>
       </Grid>
-    </React.Fragment>
+
   );
 };
 
