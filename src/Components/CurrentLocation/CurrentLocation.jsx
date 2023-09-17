@@ -51,6 +51,9 @@ const CurrentLocation = () => {
   }, [weahterData]);
 
   const getWeatherData = async (lat, lon) => {
+    try{
+
+   
     let apiData = await fetch(
       `${Api.base}weather?lat=${lat}&lon=${lon}&units=metric&APPID=${Api.key}`
     );
@@ -98,6 +101,11 @@ const CurrentLocation = () => {
       default:
         setIcon("CLEAR_DAY");
     }
+  }
+
+  catch{
+    alert("Something Went wrong")
+  }
   };
 
   return (
