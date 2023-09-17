@@ -59,7 +59,7 @@ const Forecast = ({icon,weahterData,setweatherData,setIcon}) => {
             main: data.weather[0].main,
             country: data.sys.country,
             visibility:data.visibility,
-            windspeed:data.wind.speed,
+            windspeed:Math.round( data.wind.speed *3.6),
             timezone:ct.getCountry(data.sys.country).timezones[0]
           });
           setKey(city)
